@@ -13,4 +13,7 @@ describe('String Calculator',()=>{
     it("sums two comma separated numbers",()=>{
         expect(add("1,2")).toBe(3)
     })
+    it('sums any number of comma-separated numbers',()=>{
+        expect(add("1,2,3,4")).toBe(10)
+    })
 })
