@@ -1,0 +1,32 @@
+# Node dependencies
+node_modules/
+
+# Output directories
+dist/
+coverage/
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files (if you ever use dotenv)
+.env
+.env.*.local
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Jest snapshots (optional, if you don't use them, this can be omitted)
+__snapshots__/
+
+# Local test reports
+*.log
