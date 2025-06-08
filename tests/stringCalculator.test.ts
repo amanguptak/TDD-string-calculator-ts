@@ -19,4 +19,8 @@ describe('String Calculator',()=>{
     it("supports new line as valid delimiter",()=>{
         expect(add("1\n2,3")).toBe(6)
     })
+
+    it("supports custom single character delimiter",()=>{
+        expect(add("//;\n1;2")).toBe(3)
+    })
 })
