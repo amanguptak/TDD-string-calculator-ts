@@ -1,20 +1,31 @@
-export function add(input:string):number{
-   if(input === "") return 0
-    let delimPattern = /,|\n/;
-    if(input.startsWith("//")){
-        const [,delim,rest] = input.match(/^\/\/(.)\n(.*)$/)!;
-        delimPattern= new RegExp(delim)
-        input = rest
-    }
 
-    const numbers = input.split(delimPattern).map(Number);
-    const negatives = numbers.filter(n => n < 0);
-      if (negatives.length) {
-    throw new Error(`negative numbers not allowed: ${negatives.join(",")}`);
+
+function extractDelimiter(input: string): { delimiter: RegExp; numbersPart: string } {
+  if (input.startsWith("//")) {
+    const [, rawDelim, rest] = input.match(/^\/\/(.)\n(.*)$/)!;
+    return { delimiter: new RegExp(rawDelim), numbersPart: rest };
   }
-
-    const parts = input.split(delimPattern);
-    return parts.map(Number).reduce((sum,n)=> sum+n,0)
+  return { delimiter: /,|\n/, numbersPart: input };
 }
 
+function parseNumbers(input: string, delimiter: RegExp): number[] {
+  return input.split(delimiter).map(Number);
+}
 
+function validateNoNegatives(numbers: number[]) {
+  const negatives = numbers.filter(n => n < 0);
+  if (negatives.length > 0) {
+    throw new Error(`negative numbers not allowed: ${negatives.join(",")}`);
+  }
+}
+
+export function add(input: string): number {
+  if (input === "") return 0;
+
+  const { delimiter, numbersPart } = extractDelimiter(input);
+  const numbers = parseNumbers(numbersPart, delimiter);
+
+  validateNoNegatives(numbers);
+
+  return numbers.reduce((sum, n) => sum + n, 0);
+}
