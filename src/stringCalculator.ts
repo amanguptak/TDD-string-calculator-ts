@@ -7,6 +7,12 @@ export function add(input:string):number{
         input = rest
     }
 
+    const numbers = input.split(delimPattern).map(Number);
+    const negatives = numbers.filter(n => n < 0);
+      if (negatives.length) {
+    throw new Error(`negative numbers not allowed: ${negatives.join(",")}`);
+  }
+
     const parts = input.split(delimPattern);
     return parts.map(Number).reduce((sum,n)=> sum+n,0)
 }
