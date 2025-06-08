@@ -1,4 +1,5 @@
 export function add(input:string):number{
-    return 0;
+   if(input === "") return 0
+   return parseInt(input ,10)
 }
 
