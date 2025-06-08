@@ -73,16 +73,17 @@ PASS  tests/stringCalculator.test.ts
 
 ```
 string-calculator-ts/
+├── assets/
+│ └── test-output.png
 ├── src/
-│   └── stringCalculator.ts
+│ └── stringCalculator.ts
 ├── tests/
-│   └── stringCalculator.test.ts
+│ └── stringCalculator.test.ts
 ├── jest.config.js
 ├── tsconfig.json
 ├── package.json
 ├── .gitignore
 └── README.md
-```
 
 ---
 
@@ -107,6 +108,6 @@ Built by **Aman Gupta** using **TypeScript**, **Jest**, and **TDD** principles.
 
 
 
-## 📸 Screenshot (Optional)
+## 📸 Screenshot 
 
 ![Test Output](./assets/test-output.png)
