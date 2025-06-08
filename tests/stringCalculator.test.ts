@@ -9,4 +9,8 @@ describe('String Calculator',()=>{
     it("returns the number itself when one number is passed",()=>{
         expect(add("5")).toBe(5);
     })
+
+    it("sums two comma separated numbers",()=>{
+        expect(add("1,2")).toBe(3)
+    })
 })
