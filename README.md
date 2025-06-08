@@ -1,21 +1,21 @@
-#  String Calculator – TDD Kata (TypeScript)
+# 📐 String Calculator – TDD Kata (TypeScript)
 
-This project is a TDD-based implementation of the **String Calculator Kata** . It demonstrates test-driven development, clean modular code, and proper commit practices.
+This project is a TDD-based implementation of the **String Calculator Kata**. It demonstrates test-driven development, clean modular code, and proper commit practices.
 
 ---
 
 ##  Features Implemented
 
-- Return `0` for an empty string
-- Return the number itself when a single number is passed
-- Add two or more comma-separated numbers
-- Support new line (`\n`) as a delimiter
-- Support a custom delimiter (e.g. `//;\n1;2`)
-- Throw error for negative numbers with list of all negatives
+- Return `0` for an empty string  
+- Return the number itself when a single number is passed  
+- Add two or more comma-separated numbers  
+- Support new line (`\n`) as a delimiter  
+- Support a custom delimiter (e.g. `//;\n1;2`)  
+- Throw error for negative numbers with list of all negatives  
 
 ---
 
-##  Example Usage
+## 🧪 Example Usage
 
 ```ts
 add("");             // 0
@@ -31,26 +31,31 @@ add("1,-2");         // throws Error("negative numbers not allowed: -2")
 ## 🔧 Setup & Run Instructions
 
 ### 1. Install dependencies
+
 ```bash
 npm install
 ```
 
 ### 2. Run all tests
+
 ```bash
 npm test
 ```
 
 ### 3. Compile TypeScript
+
 ```bash
 npm run build
 ```
 
 ### 4. Run compiled code
+
 ```bash
 node dist/src/stringCalculator.js
 ```
 
-> You can also use `npx ts-node src/stringCalculator.ts` for direct TS execution.
+> Or use:  
+> `npx ts-node src/stringCalculator.ts` for direct TS execution
 
 ---
 
@@ -74,27 +79,28 @@ PASS  tests/stringCalculator.test.ts
 ```
 string-calculator-ts/
 ├── assets/
-│ └── test-output.png
+│   └── test-output.png
 ├── src/
-│ └── stringCalculator.ts
+│   └── stringCalculator.ts
 ├── tests/
-│ └── stringCalculator.test.ts
+│   └── stringCalculator.test.ts
 ├── jest.config.js
 ├── tsconfig.json
 ├── package.json
 ├── .gitignore
 └── README.md
+```
 
 ---
 
-## 📓 TDD Commit Guidelines
+## TDD Commit Guidelines
 
 Every commit follows the red-green-refactor cycle:
 
-- Add failing test
-- Make it pass with minimal implementation
-- Refactor for clarity and modularity
--  Commit after each meaningful step
+- ✅ Add failing test  
+- ✅ Make it pass with minimal implementation  
+- ✅ Refactor for clarity and modularity  
+- ✅ Commit after each meaningful step  
 
 ---
 
@@ -104,10 +110,6 @@ Built by **Aman Gupta** using **TypeScript**, **Jest**, and **TDD** principles.
 
 ---
 
-
-
-
-
-## 📸 Screenshot 
+## 📸 Screenshot
 
 ![Test Output](./assets/test-output.png)
